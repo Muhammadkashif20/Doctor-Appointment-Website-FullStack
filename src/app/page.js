@@ -7,7 +7,10 @@ const page = () => {
     <div className="min-h-screen">
       <Navbar/>
       <HeroSection/>
-
+      <div className="flex justify-between">
+        <h1>Premium Doctor</h1>
+        
+      </div>
     </div>
   )
 }
