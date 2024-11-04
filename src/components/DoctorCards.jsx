@@ -6,8 +6,15 @@ import {
     SelectValue,
   } from "@/components/ui/select"
 import { doctorsInfoWithPatients, doctorSpecialists } from "@/lib/Data"
+import { Button } from "./ui/button";
 
-const DoctorList = () => {
+const DoctorList = ({isHome}) => {
+  const filterCards=isHome?doctorsInfoWithPatients.slice(0,6):doctorsInfoWithPatients;
+  // {
+  //   isHome?
+  //   <Button>See All</Button>
+  //   :
+  // }
   return (
     <div >
     <div  className="flex justify-between px-14">
@@ -28,7 +35,7 @@ const DoctorList = () => {
 </Select>
     </div>
     <div className="flex flex-wrap justify-evenly gap-4 mt-8">
-  {doctorsInfoWithPatients.map((doctor) => {
+  {filterCards.map((doctor) => {
     return (
       <div className="bg-white rounded-lg shadow-lg p-6  w-full sm:w-1/3 md:w-[24rem] mt-4 ">
         <h2 className="text-2xl font-bold text-gray-800 mb-3">{doctor.name}</h2>

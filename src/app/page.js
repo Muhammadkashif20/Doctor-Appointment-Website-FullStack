@@ -6,9 +6,8 @@ import Image from "next/image";
 const page = () => {
   return (
     <div className="min-h-screen">
-      <Navbar/>
       <HeroSection/>
-      <DoctorList/>
+      <DoctorList isHome={true}/>
     </div>
   )
 }
