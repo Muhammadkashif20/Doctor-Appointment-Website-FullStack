@@ -8,7 +8,7 @@ const page = () => {
       <Navbar/>
       <HeroSection/>
       <div className="flex justify-between">
-        <h1>Premium Doctor</h1>
+        <h1 className="font-bold text-3xl mx-14 ">Premium Doctor</h1>
         
       </div>
     </div>
