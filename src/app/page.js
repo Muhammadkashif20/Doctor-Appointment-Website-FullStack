@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import DoctorList from "@/components/Select";
+import DoctorList from "@/components/DoctorCards";
 import Image from "next/image";
 
 const page = () => {
@@ -9,7 +9,6 @@ const page = () => {
       <Navbar/>
       <HeroSection/>
       <DoctorList/>
-     
     </div>
   )
 }
