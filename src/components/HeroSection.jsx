@@ -22,7 +22,7 @@ const HeroSection = () => {
 </p>
 
       <div className="flex justify-center gap-4">
-      <Button>Button</Button>
+      <Button varient={'outline'}>Button</Button>
       <Button>Apply As a Doctor</Button>
       </div>
     </div>

@@ -7,19 +7,21 @@ import {
   } from "@/components/ui/select"
 import { doctorsInfoWithPatients, doctorSpecialists } from "@/lib/Data"
 import { Button } from "./ui/button";
-
+import Link from "next/link";
 const DoctorList = ({isHome}) => {
   const filterCards=isHome?doctorsInfoWithPatients.slice(0,6):doctorsInfoWithPatients;
-  // {
-  //   isHome?
-  //   <Button>See All</Button>
-  //   :
-  // }
+ 
   return (
     <div >
     <div  className="flex justify-between px-14">
         <h1 className="font-bold text-3xl  ">Premium Doctor</h1>
-              <Select>
+         {
+       isHome?
+       <Link href={"/SeeDoctors"}>
+       <Button>See All</Button>
+       </Link>
+       :
+<Select>
   <SelectTrigger className="w-[180px]">
     <SelectValue placeholder="Doctor specialized"/>
   </SelectTrigger>
@@ -32,7 +34,9 @@ const DoctorList = ({isHome}) => {
     })}
  
   </SelectContent>
-</Select>
+</Select> 
+     }
+              
     </div>
     <div className="flex flex-wrap justify-evenly gap-4 mt-8">
   {filterCards.map((doctor) => {
