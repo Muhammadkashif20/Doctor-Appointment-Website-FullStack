@@ -7,7 +7,7 @@ const HeroSection = () => {
       <section className="text-gray-600 body-font  ">
   <div className="container mx-auto flex pl-14  py-24 md:flex-row flex-col items-center justify-between ">
     <div className="lg:flex-grow md:w-3/5 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-    <h1 className="title-font sm:text-4xl text-3xl mb-6  font-medium text-gray-900 ">
+    <h1 className="title-font font-semibold sm:text-4xl text-3xl mb-6 text-gray-900 ">
   Your Health, Your Priority
   <br className="hidden lg:inline-block" />
   Book Your
@@ -22,7 +22,7 @@ const HeroSection = () => {
 </p>
 
       <div className="flex justify-center gap-4">
-      <Button varient={'outline'}>Button</Button>
+      <Button variant='outline'>Find Doctor You Need</Button>
       <Button>Apply As a Doctor</Button>
       </div>
     </div>
