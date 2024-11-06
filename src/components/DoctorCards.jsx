@@ -5,7 +5,6 @@ import Link from "next/link";
 import {PlusIcon,ClockIcon,CardStackMinusIcon,AvatarIcon} from "@radix-ui/react-icons"
 const DoctorList = ({isHome}) => {
   const filterCards=isHome?doctorsInfoWithPatients.slice(0,6):doctorsInfoWithPatients;
- 
   return (
     <div >
     <div  className="flex justify-between px-14">
@@ -62,7 +61,7 @@ const DoctorList = ({isHome}) => {
           <Button variant='outline' className="mt-5">
           {doctor.categories}
           </Button>
-          <Link href={`/SeeDoctors ${doctorsInfoWithPatients.id}`}>
+          <Link href={`/SeeDoctors/${doctor.id}`}>
           <Button className="mt-5 ">Book Appointment</Button>
           </Link>
         </div>
