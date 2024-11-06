@@ -1,5 +1,4 @@
-
-
+// The Data In Docotr-appointment:-
 export const doctorSpecialists = ["Cardiologist","Dermatologist","Neurologist","Orthopedic Surgeon","Pediatrician","Psychiatrist","Ophthalmologist","Gynecologist","Oncologist","Dentist","General Practitioner","Endocrinologist","Gastroenterologist","Urologist","Pulmonologist"];
 export const doctorsInfoWithPatients = [
     {
