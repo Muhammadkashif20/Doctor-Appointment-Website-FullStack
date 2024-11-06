@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { doctorsInfoWithPatients } from "@/lib/Data"
 import {PlusIcon,ClockIcon,CardStackMinusIcon,AvatarIcon} from "@radix-ui/react-icons"
 import Image from "next/image";
@@ -9,12 +10,11 @@ return(
      <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-24 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-    <div>
+    <div className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
       <Image
         alt="ecommerce"
         width={600}
         height={600}
-        className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
         src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         </div>
@@ -124,28 +124,35 @@ return(
           </span>
         </div>
         <p className="leading-relaxed ">
-          Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-          sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps
-          cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine
-          tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean
-          shorts keytar banjo tattooed umami cardigan.
+        {doctorInfo.description}
         </p>   
-        <div className="flex items-center gap-2">
-         <ClockIcon/>
-         <p className="text-gray-600 "><strong>Appointment Time:</strong> {doctorInfo.appointmentTime}</p>
-         </div>
-         <div className="flex items-center gap-2">
-           <CardStackMinusIcon/>
-         <p className="text-gray-600"><strong>Fees:</strong> ${doctorInfo.fees}</p>
-         </div>
-         <div className="flex items-center gap-2">
-         <AvatarIcon/>
-         <p className="text-gray-600"><strong>Gender:</strong> {doctorInfo.gender}</p>
-         </div>
-         <div className="flex items-center gap-2">
-         <PlusIcon/>
-         <p className="text-gray-600"><strong>Hospital:</strong> {doctorInfo.hospital}</p>
- </div>       
+        <div className="mt-5">
+  <div className="flex items-center gap-2">
+    <ClockIcon />
+    <p className="text-gray-600 ">
+      <strong>Appointment Time:</strong> {doctorInfo.appointmentTime}
+    </p>
+  </div>
+  <div className="flex items-center gap-2">
+    <CardStackMinusIcon />
+    <p className="text-gray-600">
+      <strong>Fees:</strong> ${doctorInfo.fees}
+    </p>
+  </div>
+  <div className="flex items-center gap-2">
+    <AvatarIcon />
+    <p className="text-gray-600">
+      <strong>Gender:</strong> {doctorInfo.gender}
+    </p>
+  </div>
+  <div className="flex items-center gap-2">
+    <PlusIcon />
+    <p className="text-gray-600">
+      <strong>Hospital:</strong> {doctorInfo.hospital}
+    </p>
+  </div>
+</div>
+<Button className="mt-5 w-full">Book Appointment</Button>
       </div>
     </div>
   </div>
