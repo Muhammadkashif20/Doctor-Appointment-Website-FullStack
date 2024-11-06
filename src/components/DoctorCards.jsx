@@ -37,29 +37,34 @@ const DoctorList = ({isHome}) => {
   {filterCards.map((doctor) => {
     return (
       <div className="bg-white rounded-lg shadow-lg p-6  w-full sm:w-1/3 md:w-[24rem] mt-4 ">
-        <h2 className="text-2xl font-bold text-gray-800 mb-3">{doctor.name}</h2>
-        <div className="flex items-center gap-2">
-        <ClockIcon/>
-        <p className="text-gray-600 "><strong>Appointment Time:</strong> {doctor.appointmentTime}</p>
+         <h2 className="text-2xl font-bold text-gray-800 mb-3">{doctor.name}</h2>
+        {!isHome && <div>
+         <div className="flex items-center gap-2">
+         <ClockIcon/>
+         <p className="text-gray-600 "><strong>Appointment Time:</strong> {doctor.appointmentTime}</p>
+         </div>
+         <div className="flex items-center gap-2">
+           <CardStackMinusIcon/>
+         <p className="text-gray-600"><strong>Fees:</strong> ${doctor.fees}</p>
+         </div>
+         <div className="flex items-center gap-2">
+         <AvatarIcon/>
+         <p className="text-gray-600"><strong>Gender:</strong> {doctor.gender}</p>
+         </div>
+         <div className="flex items-center gap-2">
+         <PlusIcon/>
+         <p className="text-gray-600"><strong>Hospital:</strong> {doctor.hospital}</p>
+ </div>
         </div>
-        <div className="flex items-center gap-2">
-          <CardStackMinusIcon/>
-        <p className="text-gray-600"><strong>Fees:</strong> ${doctor.fees}</p>
-        </div>
-        <div className="flex items-center gap-2">
-        <AvatarIcon/>
-        <p className="text-gray-600"><strong>Gender:</strong> {doctor.gender}</p>
-        </div>
-        <div className="flex items-center gap-2">
-        <PlusIcon/>
-        <p className="text-gray-600"><strong>Hospital:</strong> {doctor.hospital}</p>
-</div>
+        }
+       
         <div className="flex gap-3">
           <Button variant='outline' className="mt-5">
-
           {doctor.categories}
           </Button>
+          <Link href={`/SeeDoctors ${doctorsInfoWithPatients.id}`}>
           <Button className="mt-5 ">Book Appointment</Button>
+          </Link>
         </div>
       </div>
     )
