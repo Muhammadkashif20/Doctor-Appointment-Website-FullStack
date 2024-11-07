@@ -129,4 +129,82 @@ export const CurrentUser={
         role:'doctor',
         email:'Kashif23@gmial.com'
     }
-
+    
+    export const doctorAppointments = [
+        {
+            user: {
+                name: "Ali Khan",
+                email: "alikhan@example.com"
+            },
+            appointment: {
+                time: "2:00 PM - 3:00 PM",
+                status: "Confirmed", 
+                date: "2024-11-10"
+            },
+            doctor: {
+                name: "Dr. Sarah Johnson",
+                hospital: "Downtown Medical Center"
+            }
+        },
+        {
+            user: {
+                name: "Fatima Noor",
+                email: "fatimanoor@example.com"
+            },
+            appointment: {
+                time: "10:00 AM - 11:00 AM",
+                status: "Pending",
+                date: "2024-11-11"
+            },
+            doctor: {
+                name: "Dr. Michael Brown",
+                hospital: "HealthCare Clinic"
+            }
+        },
+        {
+            user: {
+                name: "Ahmed Raza",
+                email: "ahmedraza@example.com"
+            },
+            appointment: {
+                time: "1:00 PM - 2:00 PM",
+                status: "Cancelled",
+                date: "2024-11-12"
+            },
+            doctor: {
+                name: "Dr. Emily Davis",
+                hospital: "General Hospital"
+            }
+        },
+        {
+            user: {
+                name: "Zara Sheikh",
+                email: "zarasheikh@example.com"
+            },
+            appointment: {
+                time: "3:30 PM - 4:30 PM",
+                status: "Confirmed",
+                date: "2024-11-13"
+            },
+            doctor: {
+                name: "Dr. Robert Wilson",
+                hospital: "Main Street Hospital"
+            }
+        },
+        {
+            user: {
+                name: "Usman Ali",
+                email: "usmanali@example.com"
+            },
+            appointment: {
+                time: "9:00 AM - 10:00 AM",
+                status: "Pending",
+                date: "2024-11-14"
+            },
+            doctor: {
+                name: "Dr. Laura Martinez",
+                hospital: "Sunrise Clinic"
+            }
+        }
+    ];
+    
