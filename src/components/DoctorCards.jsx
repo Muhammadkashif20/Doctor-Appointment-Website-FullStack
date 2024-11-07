@@ -62,7 +62,7 @@ const DoctorList = ({isHome}) => {
           {doctor.categories}
           </Button>
           <Link href={`/SeeDoctors/${doctor.id}`}>
-          <Button className="mt-5 ">Book Appointment</Button>
+          <Button className="mt-5 ">See Details</Button>
           </Link>
         </div>
       </div>

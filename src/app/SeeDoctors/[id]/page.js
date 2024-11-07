@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function DoctorDetails({params}) {
     const doctorInfo=doctorsInfoWithPatients.find((doctor)=>doctor.id==params.id)
+    
 return(
     <div>
      <section className="text-gray-600 body-font overflow-hidden">
@@ -12,7 +13,7 @@ return(
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
     <div className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
       <Image
-        alt="ecommerce"
+        alt="ecomm  erce"
         width={600}
         height={600}
         src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -152,7 +153,7 @@ return(
     </p>
   </div>
 </div>
-<Button className="mt-5 w-full">Book Appointment</Button>
+<Button className="mt-5 w-full">Book Your Appointment</Button>
       </div>
     </div>
   </div>

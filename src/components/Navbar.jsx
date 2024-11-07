@@ -1,6 +1,7 @@
 import {Menubar,MenubarContent,MenubarItem,MenubarMenu,MenubarSeparator,MenubarTrigger,
   } from "@/components/ui/menubar"
   import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+  import Link from 'next/link';
 const Navbar = () => {
   return (
     <div className='flex justify-between container px-14 p-4  bg-gray-100'> 
@@ -14,8 +15,12 @@ const Navbar = () => {
 </Avatar>
     </MenubarTrigger>
     <MenubarContent>
+      <Link href={"/Profile"}>
       <MenubarItem>My Profile</MenubarItem>
+      </Link>
+      <Link href={"/Appointment"}>
       <MenubarItem>Appointment</MenubarItem>
+      </Link>
       <MenubarSeparator />
       <MenubarItem>Logout</MenubarItem>
       <MenubarSeparator />

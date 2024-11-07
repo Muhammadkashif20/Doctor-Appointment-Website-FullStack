@@ -101,5 +101,32 @@ export const doctorsInfoWithPatients = [
         categories: "Endocrinologist",
         description: "Dr. Priya Patel is an Endocrinologist at Endo Specialty Clinic, specializing in hormonal imbalances and related conditions, including diabetes and thyroid disorders. She is known for her patient-centric approach and personalized treatment plans. Dr. Patel’s deep understanding of endocrinology helps her patients manage their health effectively. Her appointment time is from 10:30 AM to 1:30 PM, and her fees are $250."
     }
+    ,
+    {
+        id: 11,
+        name: "Dr. James Walker",
+        appointmentTime: "12:00 PM - 2:30 PM",
+        fees: 190,
+        gender: "Male",
+        hospital: "City Heart Institute",
+        categories: "Cardiothoracic Surgeon",
+        description: "Dr. James Walker is a Cardiothoracic Surgeon at City Heart Institute, specializing in surgeries related to the heart, lungs, and other organs in the thoracic cavity. He is highly skilled in procedures such as bypass surgery and valve replacement. Patients appreciate his calm approach and expertise, ensuring their confidence in his care. His consultation times are from 12:00 PM to 2:30 PM, with a fee of $190."
+    },
+    {
+        id: 12,
+        name: "Dr. Sophia Lin",
+        appointmentTime: "3:30 PM - 6:00 PM",
+        fees: 210,
+        gender: "Female",
+        hospital: "Harmony Health Center",
+        categories: "Psychiatrist",
+        description: "Dr. Sophia Lin is a Psychiatrist at Harmony Health Center, offering comprehensive mental health support for conditions such as anxiety, depression, and other psychiatric disorders. She uses a compassionate and personalized approach to therapy and treatment, ensuring patients feel heard and supported. Dr. Lin's appointment slots are from 3:30 PM to 6:00 PM, and her fees are $210."
+    }
 ];
+
+export const CurrentUser={
+        name:'Kashif',
+        role:'doctor',
+        email:'Kashif23@gmial.com'
+    }
 
