@@ -1,3 +1,4 @@
+import { DatePicker} from "@/components/DatePicker";
 import { Button } from "@/components/ui/button";
 import { doctorsInfoWithPatients } from "@/lib/Data"
 import {PlusIcon,ClockIcon,CardStackMinusIcon,AvatarIcon} from "@radix-ui/react-icons"
@@ -11,11 +12,11 @@ return(
      <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-24 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-    <div className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded">
+    <div className="lg:w-1/2 w-full lg:h-auto  object-cover object-center rounded">
       <Image
-        alt="ecomm  erce"
         width={600}
-        height={600}
+        height={700}
+        style={{ height: '600px', width: '100%' }}
         src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2047&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         />
         </div>
@@ -152,6 +153,10 @@ return(
       <strong>Hospital:</strong> {doctorInfo.hospital}
     </p>
   </div>
+</div>
+<div >
+  <h1 className="font-bold my-3">Choose Your Appointment Date</h1>
+<DatePicker/>
 </div>
 <Button className="mt-5 w-full">Book Your Appointment</Button>
       </div>
