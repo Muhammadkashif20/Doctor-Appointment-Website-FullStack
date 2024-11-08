@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Button } from './ui/button'
+import Link from 'next/link'
 
 const HeroSection = () => {
   return (
@@ -23,7 +24,9 @@ const HeroSection = () => {
 
       <div className="flex justify-center gap-4">
       <Button variant='outline'>Find Doctor You Need</Button>
+      <Link href={'SeeDoctors/ApplyDoctor'}>
       <Button>Apply As a Doctor</Button>
+      </Link>
       </div>
     </div>
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 px-14 ">
