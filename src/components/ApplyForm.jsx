@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Dropzone from 'react-dropzone'
+
 import {
   Form,
   FormField,
@@ -15,6 +17,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"; // Make sure these components exist in your project
 import { Textarea } from "./ui/textarea";
+import UploadImg from "./UploadImgDrop";
 
 // Form schema with validation
 const formSchema = z.object({
@@ -250,19 +253,7 @@ function ProfileForm() {
           )}
         />
         {/* Profile Image Field */}
-        <FormField
-          control={form.control}
-          name="profileImage"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Profile Image URL</FormLabel>
-              <FormControl>
-                <Input placeholder="URL for Profile Image" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        <UploadImg/>
         <Button type="submit">Submit</Button>
       </form>
     </Form>
