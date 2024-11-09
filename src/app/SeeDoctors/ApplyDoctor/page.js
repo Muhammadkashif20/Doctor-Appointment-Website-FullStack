@@ -1,3 +1,4 @@
+import ProfileForm from "@/components/ApplyForm";
 
 export default  function ApplyDoctor(){
     return(
@@ -14,6 +15,7 @@ export default  function ApplyDoctor(){
                 and skilled individuals who are
                  committed to delivering the highest standards of care.
             </p>
+            <ProfileForm/>
         </div>
     )
 }
