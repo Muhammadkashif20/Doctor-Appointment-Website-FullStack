@@ -5,8 +5,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Dropzone from 'react-dropzone'
-
 import {
   Form,
   FormField,
@@ -15,7 +13,7 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from "@/components/ui/form"; // Make sure these components exist in your project
+} from "@/components/ui/form"; 
 import { Textarea } from "./ui/textarea";
 import UploadImg from "./UploadImgDrop";
 
@@ -34,7 +32,6 @@ const formSchema = z.object({
   contact: z.string(),
   email: z.string().email(),
   address: z.string(),
-  days: z.array([string]),
 });
 
 function ProfileForm() {
@@ -50,7 +47,6 @@ function ProfileForm() {
       experience: "",
       specialization: "",
       appointmentTime: "",
-      profileImage: "",
       contact: "",
       email: "",
       address: "",
@@ -225,20 +221,7 @@ function ProfileForm() {
               </FormItem>
             )}
           />
-          {/* Day's for Availabel Doctor */}
-          <FormField
-            control={form.control}
-            name="address"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Days</FormLabel>
-                <FormControl>
-                  <Input placeholder="Availabel Days" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+         
         </div>
         {/* Bio Field */}
         <FormField

@@ -12,7 +12,7 @@ const Navbar = () => {
         session?<Menubar>
         <MenubarMenu>
           <MenubarTrigger>
-          <Avatar className="bg-transparent border-2 border-gray-300 !shadow-none">
+          <Avatar className="bg-transparent border-2 border-gray-300 !shadow-none ">
         <AvatarImage src="https://github.com/shadcn.png" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
