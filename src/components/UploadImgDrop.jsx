@@ -1,7 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
-
 export default function UploadImg() {
+  const thumbsContainer = {
+  display: "flex",
+  flexWrap: "wrap",
+  gap: "12px",
+  marginTop: "16px",
+};
     const [files, setFiles] = useState([]);
     const {getRootProps, getInputProps} = useDropzone({
       accept: {
