@@ -7,7 +7,7 @@ export default  function ApplyDoctor(){
             <p className="pt-2 text-gray-500">
             Join our dedicated team of healthcare professionals 
             and make a difference in the lives of patients.
-             As a doctor, you'll have the opportunity
+             As a doctor, you all have the opportunity
               to provide essential medical care,
                work alongside skilled colleagues, 
                and gain invaluable experience in a dynamic environment.
