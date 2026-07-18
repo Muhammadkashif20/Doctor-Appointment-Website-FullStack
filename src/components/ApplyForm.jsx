@@ -56,7 +56,6 @@ function ProfileForm() {
   const onSubmit = (values) => {
     console.log(values);
   };
-
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -223,18 +222,22 @@ function ProfileForm() {
           />
          
         </div>
-        {/* Bio Field */}
-        <FormField
-          control={form.control}
-          name="bio"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Bio</FormLabel>
-              <Textarea placeholder="Enter Your Text" />
-              <FormMessage />
-            </FormItem>
-          )}
+      <FormField
+  control={form.control}
+  name="bio"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Bio</FormLabel>
+      <FormControl>
+        <Textarea
+          placeholder="Enter Your Text"
+          {...field}
         />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
         {/* Profile Image Field */}
         <UploadImg/>
         <Button type="submit">Submit</Button>

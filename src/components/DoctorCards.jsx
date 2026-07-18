@@ -6,9 +6,17 @@ import {PlusIcon,ClockIcon,CardStackMinusIcon,AvatarIcon} from "@radix-ui/react-
 const DoctorList = ({isHome}) => {
   const filterCards=isHome?doctorsInfoWithPatients.slice(0,6):doctorsInfoWithPatients;
   return (
-    <div >
-    <div  className="flex justify-between px-14">
-        <h1 className="font-bold text-3xl  ">Premium Doctor</h1>
+    <div className="bg-gray-50 py-14">
+ <div className="mx-auto flex max-w-7xl items-end justify-between px-6 lg:px-10">
+  <div>
+    <h1 className="text-3xl font-bold tracking-tight text-black">
+      Premium Doctors
+    </h1>
+
+    <p className="mt-2 text-gray-500">
+      Choose from experienced and trusted healthcare professionals.
+    </p>
+  </div>
          {
        isHome?
        <Link href={"/SeeDoctors"}>
@@ -16,7 +24,7 @@ const DoctorList = ({isHome}) => {
        </Link>
        :
 <Select>
-  <SelectTrigger className="w-[180px]">
+  <SelectTrigger className="w-[180px]"> 
     <SelectValue placeholder="Doctor specialized"/>
   </SelectTrigger>
   <SelectContent>
@@ -32,10 +40,10 @@ const DoctorList = ({isHome}) => {
      }
               
     </div>
-    <div className="flex flex-wrap justify-evenly gap-4 mt-8 mb-10">
+   <div className="mx-auto mt-10 grid max-w-7xl gap-6 px-6 lg:grid-cols-3 md:grid-cols-2 lg:px-10">
   {filterCards.map((doctor) => {
     return (
-      <div className="bg-white rounded-lg shadow-lg p-6  w-full sm:w-1/3 md:w-[24rem] mt-4 ">
+      <div className="bg-white rounded-lg shadow-lg p-6  w-full sm:w-1/3 md:w-[24rem] mt-4" key={doctor.id} > 
          <h2 className="text-2xl font-bold text-gray-800 mb-3">{doctor.name}</h2>
         {!isHome && <div>
          <div className="flex items-center gap-2">
@@ -69,10 +77,7 @@ const DoctorList = ({isHome}) => {
     )
   })}
 </div>
-
-
-    </div>
-  )
+  </div>
+)  
 }
-
-export default DoctorList
+export default DoctorList;
