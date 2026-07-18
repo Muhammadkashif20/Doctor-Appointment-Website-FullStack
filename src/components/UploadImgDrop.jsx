@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useDropzone,thumbsContainer} from 'react-dropzone';
+import {useDropzone} from 'react-dropzone';
 
 export default function UploadImg() {
     const [files, setFiles] = useState([]);
@@ -35,7 +35,7 @@ export default function UploadImg() {
       <section className="container">
         <div {...getRootProps({className: 'dropzone'})} className='bg-gray-50 rounded-md p-3 h-20 my-5'>
           <input {...getInputProps()} />
-          <p>Drag 'n' drop some files here, or click to select files</p>
+          <p>Drag and drop some files here, or click to select files</p>
         </div>
         <aside style={thumbsContainer}>
           {thumbs}
