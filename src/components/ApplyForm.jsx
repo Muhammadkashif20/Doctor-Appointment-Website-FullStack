@@ -31,7 +31,7 @@ const formSchema = z.object({
   experience: z.string(),
   specialization: z.string(),
   appointmentTime: z.string(),
-  // profileImage: z.string(),
+  profileImage: z.string().nonempty("Profile image is required"),
   contact: z.string(),
   email: z.string().email(),
   address: z.string(),
@@ -54,21 +54,30 @@ function ProfileForm() {
       appointmentTime: "",
       contact: "",
       email: "",
+      profileImage: "",
       address: "",
     },
   });
 
-  const onSubmit = (values) => {
-      console.log("Submitted");
-    console.log(values);
- toast({
-      title: "Application Submitted 🎉",
-      description:
-        "Your doctor application has been submitted successfully and is awaiting admin approval.",
-    });
+ const onSubmit = async (values) => {
+  console.log("Submitted");
+  console.log(values);
 
-    
-  };
+  toast({
+    title: "Application Submitted 🎉",
+    description:
+      "Your application has been submitted successfully and is awaiting admin approval.",
+  });
+
+  // Form reset
+  form.reset();
+
+  // Redirect after 1.5 seconds
+  setTimeout(() => {
+    router.push("/");
+  }, 1500);
+};
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
