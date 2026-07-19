@@ -69,10 +69,7 @@ function ProfileForm() {
       "Your application has been submitted successfully and is awaiting admin approval.",
   });
 
-  // Form reset
   form.reset();
-
-  // Redirect after 1.5 seconds
   setTimeout(() => {
     router.push("/");
   }, 1500);
@@ -261,7 +258,13 @@ function ProfileForm() {
           )}
         />
         {/* Profile Image Field */}
-        <UploadImg />
+        <UploadImg
+  onChange={(value) =>
+    form.setValue("profileImage", value, {
+      shouldValidate: true,
+    })
+  }
+/>
         <Button type="submit">Submit Application</Button>
       </form>
     </Form>
