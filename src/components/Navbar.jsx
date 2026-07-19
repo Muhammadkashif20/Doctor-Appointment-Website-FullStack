@@ -60,7 +60,7 @@ const Navbar = () => {
             </MenubarMenu>
           </Menubar>
         ) : (
-          <Link href="/Signin">
+          <Link href="/auth/login">
             <Button className="rounded-full bg-black px-6 hover:bg-gray-900">
               Login
             </Button>

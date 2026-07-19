@@ -158,7 +158,7 @@ return(
   <h1 className="font-bold my-3">Choose Your Appointment Date</h1>
 <DatePicker/>
 </div>
-<Button className="mt-5 w-full">Book Your Appointment</Button>
+<Button  className="mt-5 w-full">Book Your Appointment</Button>
       </div>
     </div>
   </div>

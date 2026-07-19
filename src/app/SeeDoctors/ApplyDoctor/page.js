@@ -14,7 +14,7 @@ export default  function ApplyDoctor(){
                 We are looking for compassionate 
                 and skilled individuals who are
                  committed to delivering the highest standards of care.
-            </p>
+             </p>
             <ProfileForm/>
         </div>
     )
