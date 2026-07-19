@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+
 import {
   Form,
   FormField,
@@ -13,9 +14,11 @@ import {
   FormControl,
   FormDescription,
   FormMessage,
-} from "@/components/ui/form"; 
+} from "@/components/ui/form";
 import { Textarea } from "./ui/textarea";
 import UploadImg from "./UploadImgDrop";
+import { useRouter } from "next/navigation";
+import { useToast } from "@/hooks/use-toast";
 
 // Form schema with validation
 const formSchema = z.object({
@@ -28,13 +31,15 @@ const formSchema = z.object({
   experience: z.string(),
   specialization: z.string(),
   appointmentTime: z.string(),
-  profileImage: z.string(),
+  // profileImage: z.string(),
   contact: z.string(),
   email: z.string().email(),
   address: z.string(),
 });
 
 function ProfileForm() {
+  const router = useRouter();
+  const { toast } = useToast();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -54,7 +59,15 @@ function ProfileForm() {
   });
 
   const onSubmit = (values) => {
+      console.log("Submitted");
     console.log(values);
+ toast({
+      title: "Application Submitted 🎉",
+      description:
+        "Your doctor application has been submitted successfully and is awaiting admin approval.",
+    });
+
+    
   };
   return (
     <Form {...form}>
@@ -220,27 +233,27 @@ function ProfileForm() {
               </FormItem>
             )}
           />
-         
+
         </div>
-      <FormField
-  control={form.control}
-  name="bio"
-  render={({ field }) => (
-    <FormItem>
-      <FormLabel>Bio</FormLabel>
-      <FormControl>
-        <Textarea
-          placeholder="Enter Your Text"
-          {...field}
+        <FormField
+          control={form.control}
+          name="bio"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Bio</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Enter Your Text"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
         />
-      </FormControl>
-      <FormMessage />
-    </FormItem>
-  )}
-/>
         {/* Profile Image Field */}
-        <UploadImg/>
-        <Button type="submit">Submit</Button>
+        <UploadImg />
+        <Button type="submit">Submit Application</Button>
       </form>
     </Form>
   );
