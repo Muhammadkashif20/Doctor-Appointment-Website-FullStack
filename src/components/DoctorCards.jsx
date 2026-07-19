@@ -1,10 +1,19 @@
+"use client";
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue,} from "@/components/ui/select"
 import { doctorsInfoWithPatients, doctorSpecialists } from "@/lib/Data"
 import { Button } from "./ui/button";
 import Link from "next/link";
+import {useState} from "react"
 import {PlusIcon,ClockIcon,CardStackMinusIcon,AvatarIcon} from "@radix-ui/react-icons"
 const DoctorList = ({isHome}) => {
+  const [selectedSpecialization, setSelectedSpecialization] = useState("all");
   const filterCards=isHome?doctorsInfoWithPatients.slice(0,6):doctorsInfoWithPatients;
+  const filteredDoctors =
+  selectedSpecialization === "all"
+    ? filterCards
+    : filterCards.filter(
+        (doctor) => doctor.categories === selectedSpecialization
+      );
   return (
     <div className="bg-gray-50 py-14">
  <div className="mx-auto flex max-w-7xl items-end justify-between px-6 lg:px-10">
@@ -23,8 +32,8 @@ const DoctorList = ({isHome}) => {
        <Button>See All</Button>
        </Link>
        :
-<Select>
-  <SelectTrigger className="w-[180px]"> 
+<Select onValueChange={(value) => setSelectedSpecialization(value)}>
+    <SelectTrigger className="w-[180px]"> 
     <SelectValue placeholder="Doctor specialized"/>
   </SelectTrigger>
   <SelectContent>
@@ -41,7 +50,7 @@ const DoctorList = ({isHome}) => {
               
     </div>
    <div className="mx-auto mt-10 grid max-w-7xl gap-6 px-6 lg:grid-cols-3 md:grid-cols-2 lg:px-10">
-  {filterCards.map((doctor) => {
+  {filteredDoctors.map((doctor) => {
     return (
       <div className="bg-white rounded-lg shadow-lg p-6  w-full sm:w-1/3 md:w-[24rem] mt-4" key={doctor.id} > 
          <h2 className="text-2xl font-bold text-gray-800 mb-3">{doctor.name}</h2>
