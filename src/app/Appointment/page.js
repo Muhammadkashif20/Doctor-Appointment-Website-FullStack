@@ -4,7 +4,7 @@ import { doctorAppointments } from "@/lib/Data"
 
  function Appointment() {
     return(
-        <div className="mt-10 "> 
+        <div className="mt-24 "> 
                 <DataTable columns={columns} data={doctorAppointments}/>
         </div>
     )
