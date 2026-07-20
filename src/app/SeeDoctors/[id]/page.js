@@ -1,12 +1,44 @@
+"use client";
 import { DatePicker} from "@/components/DatePicker";
 import { Button } from "@/components/ui/button";
 import { doctorsInfoWithPatients } from "@/lib/Data"
 import {PlusIcon,ClockIcon,CardStackMinusIcon,AvatarIcon} from "@radix-ui/react-icons"
 import Image from "next/image";
-
+import {useState} from "react"
+import { useToast } from "@/hooks/use-toast";
+import { useRouter } from "next/navigation";
 export default function DoctorDetails({params}) {
-    const doctorInfo=doctorsInfoWithPatients.find((doctor)=>doctor.id==params.id)
-    
+  // const [selectedDate , setSelectedDate] = useState("")
+  const doctorInfo=doctorsInfoWithPatients.find((doctor)=>doctor.id==params.id)
+  const { toast } = useToast();
+  const router = useRouter()
+  const session = null;
+const handleBookAppointment = () => {
+
+  // if (!session) {
+  //   toast({
+  //     variant: "destructive",
+  //     title: "Login Required",
+  //     description: "Please login to book an appointment.",
+  //   });
+
+  //   setTimeout(() => {
+  //     router.push("/auth/login");
+  //   }, 1500);
+
+  //   return;
+  // }
+
+
+  toast({
+    title: "Appointment Booked 🎉",
+    description: "Your appointment has been booked successfully.",
+  });
+
+  setTimeout(() => {
+    router.push("/Appointment");
+  }, 1500);
+};
 return(
     <div>
      <section className="text-gray-600 body-font overflow-hidden">
@@ -158,12 +190,10 @@ return(
   <h1 className="font-bold my-3">Choose Your Appointment Date</h1>
 <DatePicker/>
 </div>
-<Button  className="mt-5 w-full">Book Your Appointment</Button>
+<Button onClick={handleBookAppointment} className="mt-5 w-full">Book Your Appointment</Button>
       </div>
     </div>
   </div>
 </section>
-
     </div>
-)    
-}
+)}
