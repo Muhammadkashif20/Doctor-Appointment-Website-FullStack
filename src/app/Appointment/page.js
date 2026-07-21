@@ -2,7 +2,7 @@ import { columns } from "../AppointmentsTable/columns"
 import { DataTable } from "../AppointmentsTable/dataTable"
 import { doctorAppointments } from "@/lib/Data"
 
- function Appointment() {
+const Appointment = ()=>{
     return(
         <div className="mt-24 "> 
                 <DataTable columns={columns} data={doctorAppointments}/>

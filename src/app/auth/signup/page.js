@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-export default function Signup() {
+export default function Signup () {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-6 mt-10">
       <div className="w-full max-w-md rounded-xl border bg-white p-8 shadow-sm">
