@@ -68,7 +68,11 @@ const [session, setSession] = useState({
                   </div>
 
                   <MenubarSeparator />
-
+<Link href="/">
+  <MenubarItem className="cursor-pointer">
+    🏠 Home
+  </MenubarItem>
+</Link>
                   <Link href="/">
                     <MenubarItem className="cursor-pointer">
                       👤 My Profile
