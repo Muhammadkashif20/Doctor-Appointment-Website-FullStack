@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 border-t pt-6 text-center text-sm text-gray-500">
-          © 2026 Doctor Appointment System. All rights reserved.
+          © 2025 Doctor Appointment System. All rights reserved.
         </div>
       </div>
     </footer>
