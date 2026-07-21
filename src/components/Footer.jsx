@@ -29,21 +29,21 @@ const Footer = () => {
               </Link>
 
               <Link
-                href="/SeeDoctors"
+                href="/user/SeeDoctors"
                 className="hover:text-black transition-colors"
               >
                 Doctors
               </Link>
 
               <Link
-                href="/Appointment"
+                href="/user/Appointment"
                 className="hover:text-black transition-colors"
               >
                 Appointments
               </Link>
 
               <Link
-                href="/SeeDoctors/ApplyDoctor"
+                href="/user/SeeDoctors/ApplyDoctor"
                 className="hover:text-black transition-colors"
               >
                 Apply as Doctor

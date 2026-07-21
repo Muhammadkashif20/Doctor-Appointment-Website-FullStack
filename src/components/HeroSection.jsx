@@ -24,7 +24,7 @@ const HeroSection = () => {
 
       <div className="flex justify-center gap-4">
       <Button variant='outline'>Find Doctor You Need</Button>
-      <Link href={'SeeDoctors/ApplyDoctor'}>
+      <Link href={'user/SeeDoctors/ApplyDoctor'}>
       <Button>Apply As a Doctor</Button>
       </Link>
       </div>

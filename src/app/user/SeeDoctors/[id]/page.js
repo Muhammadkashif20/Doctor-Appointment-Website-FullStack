@@ -36,7 +36,7 @@ const handleBookAppointment = () => {
   });
 
   setTimeout(() => {
-    router.push("/Appointment");
+    router.push("/user/Appointment");
   }, 1500);
 };
 return(

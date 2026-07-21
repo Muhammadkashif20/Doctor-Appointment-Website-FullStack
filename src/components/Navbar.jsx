@@ -79,13 +79,13 @@ const [session, setSession] = useState({
                     </MenubarItem>
                   </Link>
 
-                  <Link href="/Appointment">
+                  <Link href="/user/Appointment">
                     <MenubarItem className="cursor-pointer">
                       📅 My Appointments
                     </MenubarItem>
                   </Link>
 
-                  <Link href="/SeeDoctors/ApplyDoctor">
+                  <Link href="/user/SeeDoctors/ApplyDoctor">
                     <MenubarItem className="cursor-pointer">
                       🩺 Apply as Doctor
                     </MenubarItem>

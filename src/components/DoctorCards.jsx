@@ -28,7 +28,7 @@ const DoctorList = ({isHome}) => {
   </div>
          {
        isHome?
-       <Link href={"/SeeDoctors"}>
+       <Link href={"/user/SeeDoctors"}>
        <Button>See All</Button>
        </Link>
        :
@@ -98,7 +98,7 @@ const DoctorList = ({isHome}) => {
             {doctor.categories}
           </Button>
 
-          <Link href={`/SeeDoctors/${doctor.id}`}>
+          <Link href={`/user/SeeDoctors/${doctor.id}`}>
             <Button className="mt-5">See Details</Button>
           </Link>
         </div>
