@@ -7,11 +7,12 @@ const Footer = () => {
         <div className="grid gap-10 md:grid-cols-3">
           {/* Brand */}
           <div>
+            <Link href="/">
             <h2 className="text-2xl font-bold">
               Doctor<span className="text-gray-500">.</span>
               <span className="font-light">Appointment</span>
             </h2>
-
+            </Link>
             <p className="mt-4 text-sm text-gray-500 leading-6">
               Book appointments with trusted healthcare professionals and
               manage your medical visits with ease.
